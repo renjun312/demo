@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浏览器通知</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			if(window.Notification && Notification.permission !== "denied") {
+			    Notification.requestPermission(function(status) {
+			        var n = new Notification('通知标题', { body: '这里是通知内容！' }); 
+			    });
+			}
+		</script>
+	</body>
+</html>
